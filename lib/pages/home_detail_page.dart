@@ -15,9 +15,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.theme.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.theme.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -26,7 +26,7 @@ class HomeDetailPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
+                backgroundColor: MaterialStateProperty.all(context.theme.buttonColor ),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
               child: "Buy".text.make(),
@@ -48,11 +48,11 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.theme.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
+                      catalog.name.text.xl4.color(context.theme.accentColor).bold.make(),
                       catalog.desc.text.make(),
                       10.heightBox,
                       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quisquam suscipit magni dicta, repellat, quod illo harum libero esse quidem veniam dolor dolores! Optio rerum atque maxime vero at voluptatibus!".text.make().p16(),

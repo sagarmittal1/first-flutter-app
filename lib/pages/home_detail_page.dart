@@ -12,7 +12,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -53,6 +55,7 @@ class HomeDetailPage extends StatelessWidget {
                       catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
                       catalog.desc.text.make(),
                       10.heightBox,
+                      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quisquam suscipit magni dicta, repellat, quod illo harum libero esse quidem veniam dolor dolores! Optio rerum atque maxime vero at voluptatibus!".text.make().p16(),
                     ],
                   ).py64(),
                 ),

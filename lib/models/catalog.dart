@@ -7,6 +7,11 @@ class CatalogModel {
     color: "#9da7b3",
     image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1632948875000",
   )];
+
+  // get item by id
+  static Item getById(int id) => items.firstWhere((element) => element.id == id, orElse: null);
+
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

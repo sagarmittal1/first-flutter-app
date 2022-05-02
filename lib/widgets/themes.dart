@@ -26,10 +26,11 @@ class MyTheme {
       buttonColor: lightBluishColor,
       accentColor: Colors.white,
       appBarTheme: AppBarTheme(
-        color: Colors.black,
+        // color: Colors.black,
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
-        titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+        // titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+        textTheme: Theme.of(context).textTheme.copyWith(headline6: context.textTheme.headline6?.copyWith(color: Colors.white)),
       )
   );
 
